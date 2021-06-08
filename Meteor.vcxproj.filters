@@ -24,5 +24,13 @@
     <ClCompile Include="src\cpp\Meteor.cpp">
       <Filter>src\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="src\cpp\pch.cpp">
+      <Filter>src\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\h\pch.h">
+      <Filter>src\h</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

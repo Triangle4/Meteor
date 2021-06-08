@@ -5,16 +5,27 @@
 #define HInstance() GetModuleHandle(NULL) // Used to call back our HINSTANCE
 WCHAR WindowClass[MAX_NAME_LENGTH]; // Wide Character
 WCHAR WindowTitle[MAX_NAME_LENGTH]; // Wide Character
-INT WindowWidth;
-INT WindowHeight;
+INT WindowWidth = 1280;
+INT WindowHeight  = 720;
+
+
+LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam)
+{
+
+	switch (message)
+	{
+		case WM_DESTROY: // handles closing the window when the X is clicked
+			PostQuitMessage(0);
+			break;
+	}
+	return DefWindowProc(hWnd,  message, wparam, lparam);
+}
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) //HINSTANCE - Instance of the entire Window, HINSTANCE - not used, LPSTR - Uses commands at runtime to change functionality
 {
 	// Initialize Global Variables
 	wcscpy_s(WindowClass, TEXT("Meteor"));
 	wcscpy_s(WindowTitle, TEXT("Core"));
-	WindowWidth = 800;
-	WindowHeight = 800;
 
 	// Create Window class
 	WNDCLASSEX window;
@@ -35,7 +46,7 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) //HINSTANCE - Instance of
 
 	window.hInstance = HInstance();
 
-	window.lpfnWndProc = DefWindowProc;
+	window.lpfnWndProc = WindowProcess;
 
 	RegisterClassEx(&window);
 

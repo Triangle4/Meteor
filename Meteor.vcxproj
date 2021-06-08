@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cpp\Meteor.cpp" />
+    <ClCompile Include="src\cpp\pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\h\pch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
