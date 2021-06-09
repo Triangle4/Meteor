@@ -19,18 +19,37 @@
     <Filter Include="src\bin">
       <UniqueIdentifier>{b4ef64f6-dc57-479a-9833-f3678098a7a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\pch">
+      <UniqueIdentifier>{98509d1a-38c3-47a9-8340-76a3a19daecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\res\Icons">
+      <UniqueIdentifier>{33ee2123-e0be-4d0d-9aad-263aec9c98a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cpp\Meteor.cpp">
       <Filter>src\cpp</Filter>
     </ClCompile>
     <ClCompile Include="src\cpp\pch.cpp">
-      <Filter>src\cpp</Filter>
+      <Filter>src\pch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\h\pch.h">
+    <ClInclude Include="src\cpp\pch.h">
       <Filter>src\h</Filter>
     </ClInclude>
+    <ClInclude Include="src\h\resource.h">
+      <Filter>src\h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Meteor.rc">
+      <Filter>src\res\Icons</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\res\icon_3Yl_icon.ico">
+      <Filter>src\res\Icons</Filter>
+    </Image>
   </ItemGroup>
 </Project>
